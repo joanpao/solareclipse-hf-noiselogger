@@ -36,7 +36,7 @@ eclipse-sdr-radiometer/
 ├── noise_logger.py    # Main SDR capture script (29 MHz logging)
 ├── plot_noise.py      # Data processing & visualization script
 └── README.md          # Project documentation
-
+```
 ---
 
 ## ⚙️ Features
@@ -47,7 +47,7 @@ eclipse-sdr-radiometer/
 * **Noise Power Integration:** Computes integrated power across 1 MHz bandwidth via sample-mean squared magnitude over $256 \times 1024$ samples per reading.
 * **CSV Data Export:** Saves timestamped logarithmic power outputs (`dB`) for post-processing.
 * **Publication-Ready Plotting:** Generates high-resolution time-series plots with formatted local time axes.
-
+  
 ---
 
 ## 🚀 Installation & Dependencies
@@ -56,14 +56,14 @@ Ensure you have Python 3.x installed along with the required libraries:
 
 ```bash
 pip install numpy pandas matplotlib pyrtlsdr
-
+```
 ---
 
 💻 Usage
 1. Data Collection (noise_logger.py)
 Connect your RTL-SDR Blog V4 receiver and run the logger:
 
-Bash
+```bash
 
 python3 noise_logger.py
 
@@ -72,29 +72,37 @@ The script will:
 - Disable hardware and software AGC.
 - Record average noise levels every 2 seconds.
 - Export data continuously to eclipse_ruido_29MHz.csv.
+```
 
 2. Data Visualization (plot_noise.py)
 To render the noise curve during or after the event:
 
-Bash
+```bash
 
 python3 plot_noise.py
 
 This generates a plot (grafica_eclipse_29MHz.png) displaying the noise floor evolution over time.
 
+```
 ---
 
 📄 Data Output Format
+```text
 The generated CSV file contains timestamped power entries:
 
 timestamp,power_dB
 2026-07-24 18:18:05,-44.670
 2026-07-24 18:18:07,-44.680
-
+```
+---
 👥 Credits & Acknowledgments
+```text
 Methodology & Proposal: Ricardo Lamarca Belanche.
 
 Hardware Support: RTL-SDR Blog team for V4 architecture.
-
+```
+---
 📜 License
+```text
 MIT License - Open for educational, radio astronomy, and scientific research purposes.
+```
