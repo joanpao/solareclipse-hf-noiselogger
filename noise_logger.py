@@ -1,3 +1,11 @@
+# ================================================================
+# Software developed by EA5JTT for the reception of solar noise 
+# on the 29MHz band with RTL-SDR V4, 
+# storing the data in CSV format for subsequent analysis.
+#
+# Copyright (C) 2026 Juan Pablo Sanchez EA5JTT
+# =================================================================
+
 import csv
 import time
 import numpy as np
