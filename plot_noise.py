@@ -1,3 +1,10 @@
+# ================================================================
+# Software developed by EA5JTT for display of solar noise file
+#in CSV format.
+#
+# Copyright (C) 2026 Juan Pablo Sanchez EA5JTT
+# =================================================================
+
 import os
 import sys
 import pandas as pd
@@ -12,6 +19,7 @@ NOMBRE_ARCHIVO = "eclipse_ruido_29MHz.csv"  # Asegúrate de coincidir con el CSV
 
 # Si quieres marcar los contactos del eclipse, rellena estas horas (formato "HH:MM:SS")
 # y pon MOSTRAR_CONTACTOS = True. Si no las conoces, déjalo en False.
+
 MOSTRAR_CONTACTOS = False
 FECHA_ECLIPSE = "2026-08-12"  # ajusta a la fecha real de tu observación
 CONTACTOS = {
