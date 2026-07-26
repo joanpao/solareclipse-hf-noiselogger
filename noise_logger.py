@@ -19,8 +19,14 @@ SAMPLE_RATE = 1.0e6         # 1.0 MS/s
 GAIN_DB = 25.4              # Ganancia fija en dB
 INTERVALO_SEC = 2           # Medición cada 2 segundos
 DURACION_HORAS = 2.5        # Tiempo total
-NOMBRE_ARCHIVO = "eclipse_ruido_29MHz.csv"
+PREFIJO_ARCHIVO = "ruido_29MHz"  # Prefijo común para poder identificar las sesiones
 MAX_ERRORES_SEGUIDOS = 5    # Si falla la lectura tantas veces seguidas, se aborta
+
+# Nombre de fichero generado automáticamente con la fecha y hora de inicio,
+# por ejemplo: ruido_29MHz_20260812_173000.csv
+# Así cada sesión de captura queda en un fichero distinto, listo para comparar.
+inicio_captura_str = time.strftime("%Y%m%d_%H%M%S")
+NOMBRE_ARCHIVO = f"{PREFIJO_ARCHIVO}_{inicio_captura_str}.csv"
 
 # ==========================================
 # INICIALIZACIÓN Y CAPTURA
@@ -94,3 +100,5 @@ finally:
     if sdr is not None:
         sdr.close()
         print("[+] Dispositivo SDR liberado correctamente.")
+
+
