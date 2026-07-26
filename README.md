@@ -33,9 +33,11 @@ The software implementation is based on the observational proposal by **Ricardo 
 
 ```text
 eclipse-sdr-radiometer/
-├── noise_logger.py    # Main SDR capture script (29 MHz logging)
-├── plot_noise.py      # Data processing & visualization script
-└── README.md          # Project documentation
+├── noise_logger.py           # Main SDR capture script (29 MHz logging)
+├── noise_logger_macOS.py     # Patch for Main SDR capture script (29 MHz logging) if you use a macOS
+├── plot_noise.py             # Data processing & visualization one file  script
+├── plot_noise_dual.py        # Data processing & visualization two files script
+└── README.md                 # Project documentation
 ```
 ---
 
@@ -98,6 +100,7 @@ timestamp,power_dB
 👥 Credits & Acknowledgments
 ```text
 Methodology & Proposal: Ricardo Lamarca Belanche.
+https://www.linkedin.com/posts/fernando-lamarca-belanche-0a6ba51a_rxstar-radioastronomaeda-sdr-activity-7432493090583711744-8RA1
 
 Hardware Support: RTL-SDR Blog team for V4 architecture.
 ```
